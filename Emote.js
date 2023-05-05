@@ -12,7 +12,7 @@ TG频道群：https://t.me/ifantasticsgame
 
 [rewrite_local]
 
-^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ url script-response-body https://raw.githubusercontent.com/gjwj666/qx/main/Emote.js
+^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/Emote.js
 
 [mitm] 
 
