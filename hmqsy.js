@@ -7,8 +7,6 @@
 使用声明：⚠️仅供参考，🈲转载与售卖！
 使用说明：点击登录即可变成至尊VIP。
 
-**************************************/
-
 [rewrite_local]
 ^https?:\/\/analysis\.20kaka\.cn\/api\/wechat url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/xcx/hmqsy.js
 ^https?:\/\/q12\.tuanyougou\.com url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/xcx/hmqsy.js
