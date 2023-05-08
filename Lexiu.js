@@ -6,7 +6,7 @@
 非一次性解锁，每次都要打开圈X
 使用说明：解锁部分功能，使用前先开脚本。
 使用声明：⚠️仅供参考，🈲转载与售卖！
-**************************************/
+
 
 [rewrite_local]
 ^https?:\/\/cn-ios-buy\.enjoy-mobi\.com\/zone\/1.0.1\/iosPayClient\/payVerify\.htm url script-response-body https://raw.githubusercontent.com/Crazy-Z7/Scrip/main/Lexiu.js
