@@ -14,7 +14,7 @@ TG群：https://t.me/ifantasticsgame
 **************************************
 
 [rewrite_local]
-^https:\/\/server\.(yoyiapp|zbisq)\.com url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/fimo.js
+^https:\/\/server\.(yoyiapp|zbisq)\.com url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/fimo.js
 
 [mitm]
 hostname = server.*.com
