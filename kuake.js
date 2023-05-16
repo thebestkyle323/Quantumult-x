@@ -10,7 +10,7 @@ TG群：https://t.me/ifantasticsgame
 **************************************
 
 [rewrite_local]
-https?:\/\/drive.*\.quark\.cn\/.+\/clouddrive\/(member.+|distribute\/detail.+|capacity\/growth\/info) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/kuake.js
+https?:\/\/drive.*\.quark\.cn\/.+\/clouddrive\/(member.+|distribute\/detail.+|capacity\/growth\/info) url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/kuake.js
 
 [mitm]
 hostname = drive*.quark.cn
