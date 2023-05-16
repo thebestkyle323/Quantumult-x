@@ -11,7 +11,7 @@ TG群：https://t.me/ifantasticsgame
 
 [rewrite_local]
 
-^https?:\/\/api\.open\.loveclip\.site\/UserInfo\/(UserPersonalCoreAsync|GetUserDetail) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/ajj.js
+^https?:\/\/api\.open\.loveclip\.site\/UserInfo\/(UserPersonalCoreAsync|GetUserDetail) url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/ajj.js
 
 [mitm]
 
