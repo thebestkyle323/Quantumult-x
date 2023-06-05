@@ -9,7 +9,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/api\.getdailyart\.com\/api\/(subscription\/verified|auth\/login|check-logged) url script-response-body https://github.com/thebestkyle323/Quantumult-x/blob/main/DailyArt.js
+^https?:\/\/api\.getdailyart\.com\/api\/(subscription\/verified|auth\/login|check-logged) url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/DailyArt.js
 
 [mitm]
 hostname = api.getdailyart.com
