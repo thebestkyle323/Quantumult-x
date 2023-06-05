@@ -3,7 +3,6 @@
 脚本功能：微勃视频解锁全部视频
 软件版本：3.0.1+49
 下载地址：https://bit.ly/41z4QXZ
-更新时间：2023-05-21
 脚本发布：https://t.me/ifantasticsgame
 使用声明：⚠️此脚本仅供学习与交流，
         请勿转载与贩卖！⚠️⚠️⚠️
@@ -19,8 +18,8 @@
 *******************************
 [rewrite_local]
 # > 微勃视频解锁全部视频
-^https?:\/\/.*\.com\/api\/app\/user\/info$ url script-response-body https://github.com/thebestkyle323/Quantumult-x/blob/main/WeibComicsCrack.js
-^https?:\/\/.*\.com\/api\/app\/media url script-request-header https://github.com/thebestkyle323/Quantumult-x/blob/main/WeibVideosCrack.js
+^https?:\/\/.*\.com\/api\/app\/user\/info$ url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/WeibComicsCrack.js
+^https?:\/\/.*\.com\/api\/app\/media url script-request-header https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/WeibVideosCrack.js
 
 [mitm] 
 hostname = vmbdiwr.ledyqrr.com, bfvph.djqyarm.com, tehvh.cmmsjbu.com, djytmeknk.oenwfkbaamamdq.com, czecp.iomaqzd.com, hpihsdqcy.irkkykyrabxiej.com
