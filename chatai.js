@@ -9,7 +9,7 @@
 
 hostname = api.revenuecat.com
 
-https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body https://github.com/thebestkyle323/Quantumult-x/blob/main/chatai.js
+https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/chatai.js
 
 **********************************************/
 
