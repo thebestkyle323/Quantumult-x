@@ -11,7 +11,7 @@
 *****************************************
 
 [rewrite_local]
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://github.com/thebestkyle323/Quantumult-x/blob/main/vsco.js
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/vsco.js
 
 [mitm]
 hostname = api.revenuecat.com
