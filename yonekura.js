@@ -16,7 +16,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/api\.yonekura\.cn\/.+\/uicommon\/getuser url script-response-body https://github.com/thebestkyle323/Quantumult-x/blob/main/yonekura.js
+^https?:\/\/api\.yonekura\.cn\/.+\/uicommon\/getuser url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/yonekura.js
 
 [mitm]
 hostname = api.yonekura.cn
