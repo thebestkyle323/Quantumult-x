@@ -11,7 +11,7 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/.*\.duitang\.com\/napi url script-response-body https://github.com/thebestkyle323/Quantumult-x/blob/main/duitang.js
+^https:\/\/.*\.duitang\.com\/napi url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/duitang.js
 
 [mitm] 
 hostname = *.duitang.com
