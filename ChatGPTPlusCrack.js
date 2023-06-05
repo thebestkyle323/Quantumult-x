@@ -2,7 +2,6 @@
 
 脚本功能：ChatGPT 解锁 Plus 订阅
 下载地址：http://t.cn/A6NktWbB
-更新时间：2023-05-19
 电报频道：https://t.me/ifantasticsgame
 使用声明：⚠️仅供学习交流，🈲️商业用途
 
