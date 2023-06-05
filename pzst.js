@@ -14,7 +14,7 @@
 
 [rewrite_local]
 ^https?:\/\/ad\.rhinox\.cn url reject-200
-^https?:\/\/appss\.rhinoxlab\.com\/app\/account\/getAccountInfo url script-response-body https://github.com/thebestkyle323/Quantumult-x/blob/main/pzst.js
+^https?:\/\/appss\.rhinoxlab\.com\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/pzst.js
 hostname = appss.rhinoxlab.com,ad.rhinox.cn
 ***************************************/ 
 var obj = JSON.parse($response.body);
