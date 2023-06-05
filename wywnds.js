@@ -11,7 +11,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info url script-response-body https://github.com/thebestkyle323/Quantumult-x/blob/main/wywnds.js
+^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/wywnds.js
 
 [mitm]
 hostname = p.du.163.com
