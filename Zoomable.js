@@ -1,5 +1,4 @@
 /*
-
 Zoomable：https://apps.apple.com/app/id1568442831
 脚本功能：解锁VIP
 交流频道：https://t.me/Ifantasticsgame
