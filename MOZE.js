@@ -16,7 +16,7 @@ var guding = JSON.parse($response.body);
 guding.subscriber.entitlements = {
   "Premium": {
     "expires_date": "6666-06-06T06:06:06Z",
-    "product_identifier": "https://t.me/Guding88",
+    "product_identifier": "https://t.me/Ifantasticsgame",
     "purchase_date": "2023-02-23T02:33:33Z"
   }
 };
