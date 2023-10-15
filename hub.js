@@ -1,1 +1,3 @@
-ff89b87f840003b3078cb36be3e48911ca3baea6
+# 远程 github js脚本
+https://raw.githubusercontent.com/thebestkyle323/hublist/main/hub.js url script-response-body https://raw.githubusercontent.com/thebestkyle323/hublist/main/hubc.js
+
