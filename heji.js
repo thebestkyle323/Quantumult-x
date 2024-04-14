@@ -1,7 +1,6 @@
 /*************************************
 
-项目名称：Revenuecat 系列解锁合集
-下载地址：https://too.st/CollectionsAPP
+项目名称：系列解锁合集
 更新日期：2024-04-13
 电报频道：https://t.me/iSharesubcribe
 使用声明：⚠️仅供参考，🈲转载与售卖！
