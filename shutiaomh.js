@@ -19,6 +19,6 @@ hostname = www.shutiaomh.com
 
 var body = $response.body.replace(/vipDays":\d/g,'vipDays":1')
 .replace(/nickname":".*?"/g,'nickname":"iOS社区"')
-.replace(/inviteCode":".*?"/g,'inviteCode":"658866655"')
+.replace(/inviteCode":".*?"/g,'inviteCode":"89996462"')
 .replace(/expireDays":\w+/g,'expireDays":9999')
 $done({ body });
