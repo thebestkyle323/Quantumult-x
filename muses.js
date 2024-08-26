@@ -45,6 +45,5 @@ if (typeof $response == "undefined") {
   Fantasticsgame.subscriber.entitlements[(name)].product_identifier = (appid);
   iFantasticsgame.body = JSON.stringify(Fantasticsgame);
 }
-
 $done(iFantasticsgame);
 
