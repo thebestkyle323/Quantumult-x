@@ -14,7 +14,7 @@
 
 ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/muses.js
 
-[mitm]&nbsp;
+[mitm]
 
 hostname = api.revenuecat.com
 
