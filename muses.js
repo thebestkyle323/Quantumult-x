@@ -26,13 +26,12 @@ const Fantasticsgame = JSON.parse(typeof $response != "undefined" &amp;&amp; $re
 const name = "pro";
 const appid = "PRO_AI_ANNUAL";
 
- &nbsp;
 if (typeof $response == "undefined") {
   delete $request.headers["x-revenuecat-etag"];
   delete $request.headers["X-RevenueCat-ETag"];
 
   iFantasticsgame.headers = $request.headers;
-} else if (Fantasticsgame &amp;&amp; Fantasticsgame.subscriber) {
+} else if (Fantasticsgame && Fantasticsgame.subscriber) {
   data = {
     "expires_date": "9999-09-09T09:09:09Z",
     "original_purchase_date": "2023-02-23T02:33:33Z",
