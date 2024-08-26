@@ -20,6 +20,7 @@
 hostname = api.revenuecat.com
 
 *******************************/
+
 const iFantasticsgame = {};
 const Fantasticsgame = JSON.parse(typeof $response != "undefined" &amp;&amp; $response.body || null);
 
@@ -47,4 +48,3 @@ if (typeof $response == "undefined") {
 }
 
 $done(iFantasticsgame);
-
