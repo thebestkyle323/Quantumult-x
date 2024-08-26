@@ -20,19 +20,19 @@ hostname = api.revenuecat.com
 
 *******************************/
 
-const py996 = {};
-const py997 = JSON.parse(typeof $response != "undefined" && $response.body || null);
+
+const iFantasticsgame = {};
+const Fantasticsgame = JSON.parse(typeof $response != "undefined" &amp;&amp; $response.body || null);
 
 const name = "pro";
 const appid = "PRO_AI_ANNUAL";
 
-  
 if (typeof $response == "undefined") {
   delete $request.headers["x-revenuecat-etag"];
   delete $request.headers["X-RevenueCat-ETag"];
 
-  py996.headers = $request.headers;
-} else if (py997 && py997.subscriber) {
+  iFantasticsgame.headers = $request.headers;
+} else if (Fantasticsgame && Fantasticsgame.subscriber) {
   data = {
     "expires_date": "9999-09-09T09:09:09Z",
     "original_purchase_date": "2023-02-23T02:33:33Z",
@@ -41,12 +41,11 @@ if (typeof $response == "undefined") {
     "store": "app_store"
   };
 
-  py997.subscriber.subscriptions[(appid)] = data
-  py997.subscriber.entitlements[(name)] = JSON.parse(JSON.stringify(data));
-  py997.subscriber.entitlements[(name)].product_identifier = (appid);
-  py996.body = JSON.stringify(py997);
+  Fantasticsgame.subscriber.subscriptions[(appid)] = data
+  Fantasticsgame.subscriber.entitlements[(name)] = JSON.parse(JSON.stringify(data));
+  Fantasticsgame.subscriber.entitlements[(name)].product_identifier = (appid);
+  iFantasticsgame.body = JSON.stringify(Fantasticsgame);
 }
 
-$done(py996);
-
+$done(iFantasticsgame);
   
