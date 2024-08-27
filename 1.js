@@ -12,7 +12,7 @@ TG频道群：https://t.me/iFantasticsgame
 
 [mitm] 
 
-hostname = tgz.jiaofei8.cn
+hostname = tgz.jiaofei8.cn 
 
 *******************************/
 
