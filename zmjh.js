@@ -9,7 +9,6 @@
 hostname = app.zomoplan.com
 *******************************/
 var obj =  JSON.parse($response.body);
-
 obj.result.vipExpireTime = "2999-01-01";
 obj.result.vipInfo = [
    {
@@ -17,9 +16,6 @@ obj.result.vipInfo = [
     "vipType" : "1"
   }
 ];
-
-var body = $response.body.replace(
-  .replace(/userNickName":".*?"/g,'userNickName":"iOS社区"')
 $done({body: JSON.stringify(obj)});
 
 
