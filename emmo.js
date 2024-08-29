@@ -8,8 +8,9 @@ TG频道群：https://t.me/iFantasticsgame
 http://106.54.2.168/emmoDiary/user/getUser url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/emmo.js
 
 */
-let obj = JSON.parse($response.body);
-obj.data.isLifeVip = "1";
-obj.data.vipEndTime = "2099-09-09";
-obj.data.isVip = "1";
-$done({ body: JSON.stringify(obj) });
+
+let body = $response.body;
+body = body.replace(/"isLifeVip"\s*:\s*[^,}]+/g, '"isLifeVip":"1"');
+body = body.replace(/"vipEndTime"\s*:\s*[^,}]+/g, '"vipEndTime":"2099-09-09"');
+body = body.replace(/"isVip"\s*:\s*[^,}]+/g, '"isVip":"1"');
+$done({ body });
