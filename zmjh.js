@@ -8,13 +8,10 @@
 [mitm] 
 hostname = app.zomoplan.com
 *******************************/
+
 var obj =  JSON.parse($response.body);
-obj.data.vipInfo = [
-   {
-    "vipStatus" : "1",
-    "vipType" : "1"
-  }
-];
+obj.data.vipInfo.vipStatus ="1";
+obj.data.vipType.vipStatus ="1";
 $done({body: JSON.stringify(obj)});
 
 
