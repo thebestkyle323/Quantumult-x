@@ -18,9 +18,9 @@ obj.result.vipInfo = [
   }
 ];
 
+var body = $response.body.replace(
+  .replace(/userNickName":".*?"/g,'userNickName":"iOS社区"')
 $done({body: JSON.stringify(obj)});
 
 
-var body = $response.body.replace(
-  .replace(/userNickName":".*?"/g,'userNickName":"iOS社区"')
-$done({ body });
+
