@@ -9,8 +9,7 @@
 hostname = app.zomoplan.com
 *******************************/
 var obj =  JSON.parse($response.body);
-obj.result.vipExpireTime = "2999-01-01";
-obj.result.vipInfo = [
+obj.data.vipInfo = [
    {
     "vipStatus" : "1",
     "vipType" : "1"
