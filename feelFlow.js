@@ -1,0 +1,17 @@
+/*
+ * feelFlow
+ * 解锁会员
+ * TG频道群：https://t.me/iFantasticsgame
+https://feel.wunitu.com/api/User/getUserInfo
+[rewrite_local]
+^https:\/\/feel\.wunitu\.com\/api\/User\/getUserInfo url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/feelFlow.js
+
+[mitm]
+hostname = feel.wunitu.com
+*/
+
+let response = {
+  body: 'YwEcXuR4NIIgzmcnckN7G6zkcNjH1NE3sDJqA+cW75XJgE64PMb346ni+FtSL8rDIsBuEC/r18NTKLtNGU0WDQJ3zh/EMSAYDrS+qKU1oEjFVqMkaFRg3nNAexQHntFV2wvscdAs2iA4Y06OsBOrget5fCBiMwTi/hjumvlqSmKrmCBDBeQ9RO6bZ/WOcWIgbomV2a8BtNZWDeSX5+tpFzmXP7tXMoirIoRW3VDHpRrZ61u/UgnoekQJIUsjg42oGm7dbiWwXpmIGQXbLISvjFyN6HNBIt/BOZbGWZjU/f6TUHpIYzx3B63D0tTq4asEBZhcLw5MgtxiLbAH0GVBkykRAKvBfpS32SJROZVPZ+b8nGyng1va4OEVvEEGxxpi2TkSicHgqEaD+VKzegJLV5Ut21DWffeAOpO+AddE0/8Rz03SVzdTyUrZ8wwHrIeyb0IjnhTWHRPQ97WMDfX5pcTKerRhYNhGRVaAN11rJTo2Ujxocjb9VBbHctg11FeLvwrxtawYDAc3J9/sejBuv6kNgFXRPboqOuE8VojkyipwmhG507Jp7pPgtNTIcNa8TmnljQtclyOS+0HDl0q3/X7xZNlGoZN8zUO+/LTr/5fgTniSLCrIcLiJ0UPjPGgnN77NtlzPZAQ1zYHHf5xurOWFlzAzwekW2JNU7hnW8BrjsXjFRwQeOvRclqGSwiH5O4qVCTUsC/eL+sIPS6tN7oCM5v5pUyk5+7P1yYPP1hDxXTAMZqXO9p/4QyVcjxrfyCSZtrKvQMz7s0/TVSzPB0boXhDmQn8oCim46LIuwul5VgmeWhhP5Im0+ZJbecJTvnTUxeOnWKAez2SBiZqfAnAdMRvttprqcyAdOg+pozz5rVOe+7XpBJ1UaBiNui9/7VVqqdMh81umzOiFF7YsXiGxaCb3vdiGU7CjX/VgvqutaNB8gJCjBNPWDTbw/ZI4RF+pT0zbZD3etk1fXeIB3bLdx8pInJ7uH3cgRJKQGNaDsKGaGYwJuerzooEFUgfTrcOYfEMK9P3pdXa9QA5eIdErTb/WAg8FtG9pp0xlkBOL9ZAooSxKv00XVT1fqGUr',
+};
+
+$done({body: response.body});
