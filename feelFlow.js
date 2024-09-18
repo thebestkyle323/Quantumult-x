@@ -1,7 +1,7 @@
 /*
  * feelFlow
  * 解锁会员
- * TG频道群：https://t.me/iFantasticsgame
+ * TG频道群：https://t.me/iSharesubcribe
 https://feel.wunitu.com/api/User/getUserInfo
 [rewrite_local]
 ^https:\/\/feel\.wunitu\.com\/api\/User\/getUserInfo url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/feelFlow.js
