@@ -6,8 +6,9 @@
 
 **************************************
 
+
 [rewrite_local]
-^https?:\/\/.*\.kuaidi100\.com\/(mkt\/courier\/open|open\/test|advertisement) url script-response-body https://raw.githubusercontent.com/cthebestkyle323/Quantumult-x/main/kuaidi100.js
+^https?:\/\/.*\.kuaidi100\.com\/(mkt\/courier\/open|open\/test|advertisement) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/kuaidi100.js
 
 [mitm]
 hostname = *.kuaidi100.com
@@ -15,25 +16,25 @@ hostname = *.kuaidi100.com
 *************************************/
 
 
-var iFantasticsgame = JSON.parse($response.body);
+var chxm1023 = JSON.parse($response.body);
 
 if(/advertisement/.test($request.url)){
-  iFantasticsgame.data = {};
+  chxm1023.data = {};
 }
 
 if (/getLoginInfo/i.test($request.url)) {
-  iFantasticsgame.data = {
-   ...iFantasticsgame.data,
+  chxm1023.data = {
+   ...chxm1023.data,
     "vipTag": "VIP",
     "vipDeadline": 4092599349000
   };
-  iFantasticsgame.vipTag = "VIP";
-  iFantasticsgame.vipDeadline = 4092599349000;
+  chxm1023.vipTag = "VIP";
+  chxm1023.vipDeadline = 4092599349000;
 }
 
 if (/getMyVip/.test($request.url)) {
-  iFantasticsgame.data = {
-   ...iFantasticsgame.data,
+  chxm1023.data = {
+   ...chxm1023.data,
     "vipTag": "VIP",
     "expired": 0,
     "vipTimeDetail": {
@@ -43,8 +44,8 @@ if (/getMyVip/.test($request.url)) {
     },
     "vipDeadline": 4092599349000
   };
-  if (iFantasticsgame.data.serviceList && Array.isArray(iFantasticsgame.data.serviceList)) {
-    iFantasticsgame.data.serviceList.forEach((item) => {
+  if (chxm1023.data.serviceList && Array.isArray(chxm1023.data.serviceList)) {
+    chxm1023.data.serviceList.forEach((item) => {
       if ('endTime' in item) {
         item.endTime = 4092599349000;
       }
@@ -53,7 +54,7 @@ if (/getMyVip/.test($request.url)) {
 }
 
 if(/getAllPaidService/.test($request.url)){
-  iFantasticsgame.data = {
+  chxm1023.data = {
     "CAINIAOBLUETOOTHPRINTING" : 4092599349000,
     "BATCHADDNEW" : 4092599349000,
     "EXPEXPORT" : 4092599349000,
@@ -70,4 +71,4 @@ if(/getAllPaidService/.test($request.url)){
   };
 }
 
-$done({body : JSON.stringify(iFantasticsgame)});
+$done({body : JSON.stringify(chxm1023)});
