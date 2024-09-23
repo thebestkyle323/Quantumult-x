@@ -31,18 +31,6 @@ TG频道群：https://t.me/iSharesubcribe
 
 **************************************
 
-[rewrite_local]
-#修改
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/Rehj.js
-#清理
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/Rehj.js
-https://api.lianjiu.fun/app/api/v1/profile url reject
-
-[mitm] 
-hostname = api.revenuecat.com, api.lianjiu.fun
-
-************************************/
-
 const Q = {};
 const Q1 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 if (typeof $response == "undefined") {
@@ -64,6 +52,7 @@ if (typeof $response == "undefined") {
   var UA = $request.headers['user-agent'];
   const app = '1';
   const UAMappings = {
+    'Alpenglow':{ name: 'newPro', id: 'ProLifetime'},//9.23
     'Opal':{ name: 'premium_tier_2', id: 'com.withopal.opal.premiumtier2lifetime'},//9.11
     'Photoooo':{ name: 'lifetime', id: 'canoe_28_rnb_forever'},//9.18
     'Baby%20Generator':{ name: 'premium_features', id: 'babygenerator_499_weekly'},//9.9
