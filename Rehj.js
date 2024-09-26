@@ -30,6 +30,17 @@
 TG频道群：https://t.me/iSharesubcribe
 
 **************************************
+[rewrite_local]
+#修改
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/Revenuecat.js
+#清理
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/Revenuecat.js
+https://api.lianjiu.fun/app/api/v1/profile url reject
+
+[mitm] 
+hostname = api.revenuecat.com, api.lianjiu.fun
+
+************************************/
 
 const Q = {};
 const Q1 = JSON.parse(typeof $response != "undefined" && $response.body || null);
@@ -52,6 +63,8 @@ if (typeof $response == "undefined") {
   var UA = $request.headers['user-agent'];
   const app = '1';
   const UAMappings = {
+    'AdGuard%20Home%20Remote':{name:'aghrpro',id:'adguard.home.remote.pro'},//9.25
+    'Chatme':{name:'premium',id:'chatme_premium_year_discount'},//9.24
     'Alpenglow':{ name: 'newPro', id: 'ProLifetime'},//9.23
     'Opal':{ name: 'premium_tier_2', id: 'com.withopal.opal.premiumtier2lifetime'},//9.11
     'Photoooo':{ name: 'lifetime', id: 'canoe_28_rnb_forever'},//9.18
@@ -136,7 +149,7 @@ if (typeof $response == "undefined") {
     'Currency':{ name: 'plus', id: 'com.jeffreygrossman.currencyapp.iap.pro.crossgrade'},
 
     'VSCO':{name:'pro',id:'vscopro_global_5999_annual_7D_free'},
-    'Pillow':{name:'premium',id:'com.neybox.pillow.premium.yearly'},
+    'Pillow':{name:'premium',id:'com.neybox.pillow.premium.yearly'}
     
     
     
