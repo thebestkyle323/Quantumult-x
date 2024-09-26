@@ -32,9 +32,9 @@ TG频道群：https://t.me/iSharesubcribe
 **************************************
 [rewrite_local]
 #修改
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/Revenuecat.js
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/Rehj.js
 #清理
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/Revenuecat.js
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/Rehj.js
 https://api.lianjiu.fun/app/api/v1/profile url reject
 
 [mitm] 
