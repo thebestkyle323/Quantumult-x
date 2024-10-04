@@ -17,7 +17,7 @@ hostname = api.revenuecat.com
 *************************************/
 
 
-const Sharesubcribe = {};
+const iSharesubcribe1 = {};
 const headers = $request.headers;
 const iSharesubcribe = JSON.parse(typeof $response != "undefined" && $response.body || null);
 const ua = headers['User-Agent'] || headers['user-agent'];
@@ -27,12 +27,14 @@ const bundle_id = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id']
 const forbiddenApps = ['Fileball', 'APTV'];
 const forbiddenAppFound = forbiddenApps.find(appName => (ua && ua.includes(appName)) || ($request.body && $request.body.includes(appName)));
 if (forbiddenAppFound) {
-  console.log(`发现禁止MITM的APP: ${forbiddenAppFound}，已停止运行脚本！\niSharesubcribe: https://t.me/iSharesubcribe`);
+  console.log(`发现禁止MITM的APP: ${forbiddenAppFound}，已停止运行脚本！\n叮当猫の分享频道: https://t.me/iSharesubcribe`);
   $done({});
 }
 
 //识别bundle_id
 const bundle = {
+  'tech.miidii.MDClock': { name: 'Entitlement.Pro', id: 'tech.miidii.MDClock.pro', cm: 'sjb' },  //谜底时钟
+  'com.voicedream.Voic': { name: 'standard', id: 'vd_annual_79_3daytrial', cm: 'sja' },  //声之梦
   'com.laser-focused.focus-ios': { name: 'subscribed', id: 'iap.io.masterbuilders.focus.pro_one_year', cm: 'sja' },  //Focus-专注时间管理
   'net.tengl.powertimer': { name: 'plus', id: 'powertimer.plus', cm: 'sjb' },  //元气计时-PowerTimer
   'com.reader.book': { name: 'pro', id: 'com.reader.permanentlyPro', cm: 'sjb' },  //PureLibro
@@ -43,6 +45,7 @@ const bundle = {
 
 //识别UA
 const list = {
+  'Binsoo': { name: 'vibe', id: 'annual', cm: 'sja' },  //Binsoo-照片滤镜/编辑
   'Photoooo': { name: 'lifetime', id: 'canoe_28_rnb_forever', cm: 'sjb' },  //Phorase-专业AI消除助手
   'VibeCamera': { name: 'forever', id: 'vibe_pro_forever', cm: 'sjb' },  //VIBECAM-相机
   'No%20Fusion': { name: 'LivePhoto', id: 'com.grey.nofusion.livephoto', cm: 'sjb' },  //NoFusion-相机
@@ -293,7 +296,7 @@ const list = {
   'APTV': { name: 'Pro', id: 'com.kimen.aptvpro.lifetime', cm: 'sjb' },  //APTV
   'Seamless': { name: 'Seamless.Pro', id: 'net.shinystone.Seamless.Pro', cm: 'sjb' },  //Seamless同步
   'Anybox': { name: 'pro', id: 'cc.anybox.Anybox.annual', cm: 'sja' },  //Anybox-跨平台书签管理
-  'ScannerPro': { name: 'plus', id: 'com.Sharesubcribe.premium.yearly', cm: 'sja' },  //Scanner Pro-文档扫描
+  'ScannerPro': { name: 'plus', id: 'com.iSharesubcribe1.premium.yearly', cm: 'sja' },  //Scanner Pro-文档扫描
   'Pillow': { name: 'premium', id: 'com.neybox.pillow.premium.year', cm: 'sja' },  //Pillow-睡眠周期跟踪
   'Taio': { name: 'full-version', id: 'taio_1651_1y_2w0_std_v2', cm: 'sja' },  //Tiao
   'CPUMonitor': { name: 'Pro', id: 'com.mars.cpumonitor_removeAd', cm: 'sjb' },  //手机硬件管家
@@ -305,7 +308,7 @@ const list = {
 if (typeof $response == "undefined") {
   delete headers["x-revenuecat-etag"];
   delete headers["X-RevenueCat-ETag"];
-  Sharesubcribe.headers = headers;
+  iSharesubcribe1.headers = headers;
 } else if (iSharesubcribe && iSharesubcribe.subscriber) {
   iSharesubcribe.subscriber.subscriptions = iSharesubcribe.subscriber.subscriptions || {};
   iSharesubcribe.subscriber.entitlements = iSharesubcribe.subscriber.entitlements || {};
@@ -334,8 +337,8 @@ if (typeof $response == "undefined") {
   if (typeof idb !== 'undefined' && idb !== null) {
     iSharesubcribe.subscriber.subscriptions[idb] = subData;
   }
-  Sharesubcribe.body = JSON.stringify(iSharesubcribe);
-  console.log('已操作成功\n分享频道: https://t.me/iSharesubcribe');
+  iSharesubcribe1.body = JSON.stringify(iSharesubcribe);
+  console.log('已操作成功🎉🎉🎉\n分享频道: https://t.me/iSharesubcribe');
 }
 
-$done(Sharesubcribe);
+$done(iSharesubcribe1);
