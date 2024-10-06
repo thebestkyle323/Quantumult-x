@@ -16,10 +16,9 @@ hostname = api.revenuecat.com
 
 *************************************/
 
-
-const iSharesubcribe1 = {};
+const iSharesubcribe = {};
 const headers = $request.headers;
-const iSharesubcribe = JSON.parse(typeof $response != "undefined" && $response.body || null);
+const iSharesubcribe1 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 const ua = headers['User-Agent'] || headers['user-agent'];
 const bundle_id = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'];
 
@@ -45,6 +44,7 @@ const bundle = {
 
 //识别UA
 const list = {
+  'ChatLLM': { name: 'Pro', id: 'com.curiouscreatorsco.ChatLLM.pro.lifetime.notrial.150_00', cm: 'sjb' },  //AItText
   'Binsoo': { name: 'vibe', id: 'annual', cm: 'sja' },  //Binsoo-照片滤镜/编辑
   'Photoooo': { name: 'lifetime', id: 'canoe_28_rnb_forever', cm: 'sjb' },  //Phorase-专业AI消除助手
   'VibeCamera': { name: 'forever', id: 'vibe_pro_forever', cm: 'sjb' },  //VIBECAM-相机
@@ -171,7 +171,7 @@ const list = {
   'LUTCamera': { name: 'ProVersionLifeTime', id: 'com.uzero.funforcam.lifetimepurchase', cm: 'sjb' },  //方弗相机
   'Heal%20Clock': { name: 'pro', id: 'com.mad.HealClock.pro', cm: 'sjb' },  //自愈时钟
   'tiimo': { name: 'full_access', id: 'lifetime.iap', cm: 'sjb' },  //Tiimo-可视化日程
-  'IPTVUltra': { name: 'premium', id: 'com.iSharesubcribe.lifetime', cm: 'sjb' },  //IPTVUltra
+  'IPTVUltra': { name: 'premium', id: 'com.iSharesubcribe1.lifetime', cm: 'sjb' },  //IPTVUltra
   'Wozi': { name: 'wozi_pro_2023', id: 'wozi_pro_2023', cm: 'sjb' },  //喔知Wozi背单词
   'Color%20Widgets': { name: 'pro', id: 'cw_1999_1y_3d0', cm: 'sja' },  //Color Widgets小组件
   'server_bee': { name: 'Pro', id: 'pro_45_lifetime', cm: 'sjb' },  //serverbee终端监控管理
@@ -296,7 +296,7 @@ const list = {
   'APTV': { name: 'Pro', id: 'com.kimen.aptvpro.lifetime', cm: 'sjb' },  //APTV
   'Seamless': { name: 'Seamless.Pro', id: 'net.shinystone.Seamless.Pro', cm: 'sjb' },  //Seamless同步
   'Anybox': { name: 'pro', id: 'cc.anybox.Anybox.annual', cm: 'sja' },  //Anybox-跨平台书签管理
-  'ScannerPro': { name: 'plus', id: 'com.iSharesubcribe1.premium.yearly', cm: 'sja' },  //Scanner Pro-文档扫描
+  'ScannerPro': { name: 'plus', id: 'com.iSharesubcribe.premium.yearly', cm: 'sja' },  //Scanner Pro-文档扫描
   'Pillow': { name: 'premium', id: 'com.neybox.pillow.premium.year', cm: 'sja' },  //Pillow-睡眠周期跟踪
   'Taio': { name: 'full-version', id: 'taio_1651_1y_2w0_std_v2', cm: 'sja' },  //Tiao
   'CPUMonitor': { name: 'Pro', id: 'com.mars.cpumonitor_removeAd', cm: 'sjb' },  //手机硬件管家
@@ -308,10 +308,10 @@ const list = {
 if (typeof $response == "undefined") {
   delete headers["x-revenuecat-etag"];
   delete headers["X-RevenueCat-ETag"];
-  iSharesubcribe1.headers = headers;
-} else if (iSharesubcribe && iSharesubcribe.subscriber) {
-  iSharesubcribe.subscriber.subscriptions = iSharesubcribe.subscriber.subscriptions || {};
-  iSharesubcribe.subscriber.entitlements = iSharesubcribe.subscriber.entitlements || {};
+  iSharesubcribe.headers = headers;
+} else if (iSharesubcribe1 && iSharesubcribe1.subscriber) {
+  iSharesubcribe1.subscriber.subscriptions = iSharesubcribe1.subscriber.subscriptions || {};
+  iSharesubcribe1.subscriber.entitlements = iSharesubcribe1.subscriber.entitlements || {};
   let name,nameb,ids,idb,data;
   for (const src of [list, bundle]) {
     for (const i in src) {
@@ -326,19 +326,19 @@ if (typeof $response == "undefined") {
   if (!name || !ids) {
     data = {  "purchase_date" : "2023-09-09T09:09:09Z",  "expires_date" : "2099-09-09T09:09:09Z" };
     name = 'pro';
-    ids = 'com.iSharesubcribe.pro';
+    ids = 'com.iSharesubcribe1.pro';
   }
-  iSharesubcribe.subscriber.entitlements[name] = Object.assign({}, data, { product_identifier: ids });
+  iSharesubcribe1.subscriber.entitlements[name] = Object.assign({}, data, { product_identifier: ids });
   if (typeof nameb !== 'undefined' && nameb !== null) {
-    iSharesubcribe.subscriber.entitlements[nameb] = Object.assign({}, data, { product_identifier: idb });
+    iSharesubcribe1.subscriber.entitlements[nameb] = Object.assign({}, data, { product_identifier: idb });
   }
-  const subData = Object.assign({},data,{  "Author": "iSharesubcribe",  "Telegram": "https://t.me/iSharesubcribe",  "warning": "仅供学习，禁止转载或售卖",  "original_purchase_date": "2023-09-09T09:09:09Z",  "store": "app_store",  "ownership_type": "PURCHASED"  });
-  iSharesubcribe.subscriber.subscriptions[ids] = subData;
+  const subData = Object.assign({},data,{  "Author": "iSharesubcribe1",  "Telegram": "https://t.me/iSharesubcribe",  "warning": "仅供学习，禁止转载或售卖",  "original_purchase_date": "2023-09-09T09:09:09Z",  "store": "app_store",  "ownership_type": "PURCHASED"  });
+  iSharesubcribe1.subscriber.subscriptions[ids] = subData;
   if (typeof idb !== 'undefined' && idb !== null) {
-    iSharesubcribe.subscriber.subscriptions[idb] = subData;
+    iSharesubcribe1.subscriber.subscriptions[idb] = subData;
   }
-  iSharesubcribe1.body = JSON.stringify(iSharesubcribe);
-  console.log('已操作成功🎉🎉🎉\n分享频道: https://t.me/iSharesubcribe');
+  iSharesubcribe.body = JSON.stringify(iSharesubcribe1);
+  console.log('已操作成功🎉🎉🎉\n叮当猫の分享频道: https://t.me/iSharesubcribe');
 }
 
-$done(iSharesubcribe1);
+$done(iSharesubcribe);
