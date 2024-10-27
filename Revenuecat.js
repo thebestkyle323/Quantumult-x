@@ -40,7 +40,9 @@ https://api.lianjiu.fun/app/api/v1/profile url reject
 [mitm] 
 hostname = api.revenuecat.com, api.lianjiu.fun
 
-************************************/thebestkyle323/Quantumult-x/main
+
+
+************************************
 
 const Q = {};
 const Q1 = JSON.parse(typeof $response != "undefined" && $response.body || null);
@@ -63,6 +65,7 @@ if (typeof $response == "undefined") {
   var UA = $request.headers['user-agent'];
   const app = '1';
   const UAMappings = {
+    'Treering':{name:'Pro',id:'Treering.pro.yearly1'},//10.26
     'AmazingWidget':{name:'pro',id:'moyo_subcription_yearly'},//10.22
     'dtdVibe':{name:'pro',id:'com.dtd.aroundu.year'},//9.26
     'DtdVibe':{name:'pro',id:'com.dtd.playlist.premium.subscription.yearr'},//9.26
