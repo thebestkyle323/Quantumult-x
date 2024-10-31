@@ -40,9 +40,7 @@ https://api.lianjiu.fun/app/api/v1/profile url reject
 [mitm] 
 hostname = api.revenuecat.com, api.lianjiu.fun
 
-
-
-************************************
+************************************/
 
 const Q = {};
 const Q1 = JSON.parse(typeof $response != "undefined" && $response.body || null);
@@ -65,6 +63,8 @@ if (typeof $response == "undefined") {
   var UA = $request.headers['user-agent'];
   const app = '1';
   const UAMappings = {
+    'Reader':{name:'standard',id:'vd_monthly_999'},//10.27
+    'Vocai-iOS':{name:'AI Pro',id:'vocabAI_900_1m'},//10.27
     'Treering':{name:'Pro',id:'Treering.pro.yearly1'},//10.26
     'AmazingWidget':{name:'pro',id:'moyo_subcription_yearly'},//10.22
     'dtdVibe':{name:'pro',id:'com.dtd.aroundu.year'},//9.26
