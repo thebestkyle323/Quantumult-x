@@ -15,7 +15,7 @@ hostname = buy.itunes.apple.com
 
 *************************************/
 
-ar iSharesubcribe = JSON.parse($response.body);
+var iSharesubcribe = JSON.parse($response.body);
 const ua = $request.headers['User-Agent'] || $request.headers['user-agent'];
 const bundle_id = iSharesubcribe.receipt["bundle_id"] || iSharesubcribe.receipt["Bundle_Id"];
 const yearid = `${bundle_id}.year`;
@@ -24,6 +24,7 @@ const yearlysubscription = `${bundle_id}.yearlysubscription`;
 const lifetimeid = `${bundle_id}.lifetime`;
 
 const list = {
+  'AIAssistant': { cm: 'timea', hx: 'hxpda', id: "AIchat_1w_7.99_trial", latest: "iSharesubcribe" },  //AIAssistant
   'MonitorPlus': { cm: 'timeb', hx: 'hxpda', id: "com.unhonin.MonitorPlus.proversion", latest: "iSharesubcribe" },  //Monitor+
   'MessageHold': { cm: 'timeb', hx: 'hxpda', id: "com.messagehold.forever", latest: "iSharesubcribe" },  //拦截盾
   'co.vulcanlabs': { cm: 'timeb', hx: 'hxpda', id: lifetimeid, latest: "iSharesubcribe" },  //vulcanlabs合集
