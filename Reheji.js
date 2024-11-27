@@ -14,7 +14,6 @@
 hostname = api.revenuecat.com
 
 *************************************/
-
 let iSharesubcribe1 = {}, iSharesubcribe = JSON.parse(typeof $response != "undefined" && $response.body || "{}");
 const headers = $request.headers, ua = headers['User-Agent'] || headers['user-agent'], bundle_id = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'];
 
