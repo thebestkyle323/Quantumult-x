@@ -14,8 +14,6 @@
 hostname = *.apphud.com
 
 *************************************/
-
-
 const iSharesubcribe = JSON.parse(typeof $response != "undefined" && $response.body || "{}");
 
 const list = [
