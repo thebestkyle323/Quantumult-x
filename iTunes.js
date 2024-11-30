@@ -24,7 +24,8 @@ const yearlysubscription = `${bundle_id}.yearlysubscription`;
 const lifetimeid = `${bundle_id}.lifetime`;
 
 const list = {
-  'Graphionica': { cm: 'timea', hx: 'hxpda', id: "premium_year", latest: "iSharesubcribe" },  //Graphionica
+  'DeviceFinder': { cm: 'timeb', hx: 'hxpda', id: "com.wonderfind.lifetime", latest: "iSharesubcribe" },  //Wonderfind-设备查找
+  'Graphionica': { cm: 'timea', hx: 'hxpda', id: "premium_year", latest: "iSharesubcribe" },  //Graphionica-限时动态拼版图片
   'AIAssistant': { cm: 'timea', hx: 'hxpda', id: "AIchat_1w_7.99_trial", latest: "iSharesubcribe" },  //AIAssistant
   'MonitorPlus': { cm: 'timeb', hx: 'hxpda', id: "com.unhonin.MonitorPlus.proversion", latest: "iSharesubcribe" },  //Monitor+
   'MessageHold': { cm: 'timeb', hx: 'hxpda', id: "com.messagehold.forever", latest: "iSharesubcribe" },  //拦截盾
