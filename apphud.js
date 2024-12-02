@@ -17,6 +17,7 @@ hostname = *.apphud.com
 const iSharesubcribe = JSON.parse(typeof $response != "undefined" && $response.body || "{}");
 
 const list = [
+  "com.newlearning.english.premium.forever",  //Excellent
   "1year7days80",  //Bright
   "com.movavi.clips.lifetime",  //Movavi
   "ok.annual.sub",  //BodyOK
