@@ -3,13 +3,13 @@
 频道地址：https://t.me/iSharesubcribe
 使用声明：️仅供学习交流, 🈲️商业用途
 ********************************
+
 [rewrite_local]
 ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/.+$) url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/crack.js
 ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/.+$) url script-request-header https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/crack.js
 [mitm] 
 hostname = api.revenuecat.com
 *******************************/
-
 let obj = {};
 
 if(typeof $response == "undefined") {
@@ -68,7 +68,9 @@ if(typeof $response == "undefined") {
       {"app_name":"Accountit","bundle_id":"DesignTech-SIA.Spendit","product_id":"DesignTech.SIA.Spendit.Plus.Lifetime","entitlements":["spenditPlus"],"version":"2.4.4"},
       {"app_name":"Giftr","bundle_id":"com.Yooshr.Giftr","product_id":"com.Yooshr.Giftr.everythingForever","entitlements":["com.Yooshr.Giftr.subscriptionPremium"],"version":"2.2"},
       {"app_name":"FastConnectLite","bundle_id":"com.freefastconnect.vpn.lite","product_id":"com.freefastconnect.vpn.lite.monthly","entitlements":["pro"],"version":"1.0.4"},
-      {"app_name":"CheckCalendar","bundle_id":"com.checkcalendar","product_id":"checkcalendar.610.lifetime","entitlements":["premium"],"version":"12.29.0"}
+      {"app_name":"CheckCalendar","bundle_id":"com.checkcalendar","product_id":"checkcalendar.610.lifetime","entitlements":["premium"],"version":"12.29.0"},
+      {"app_name":"HeartRateTracker","bundle_id":"com.mosin.heartrate","product_id":"com.mosin.heartrate.premiumNonConsumable","entitlements":["heart_premium"],"version":"2.0.20"},
+      {"app_name":"CapCap","bundle_id":"in.capcap.app","product_id":"in.capcap.subscription.pro.weekly.non.trial","entitlements":["Pro"],"version":"1.5.5"}
    ];  
    for(let data of list){
      if(bundle_id == data.bundle_id || bundle_id == data.app_name){
