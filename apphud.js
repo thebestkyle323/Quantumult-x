@@ -14,7 +14,7 @@
 hostname = *.apphud.com
 
 *************************************/
-const iSharesubcribe = JSON.parse(typeof $response != "undefined" && $response.body || "{}");
+const chxm1023 = JSON.parse(typeof $response != "undefined" && $response.body || "{}");
 
 const list = [
   "com.newlearning.english.premium.forever",  //Excellent
@@ -67,20 +67,20 @@ const processPaywalls = (paywalls) => {
   return subscriptions;
 };
 
-if (!iSharesubcribe.data) iSharesubcribe.data = {};
-if (!iSharesubcribe.data.results) iSharesubcribe.data.results = {};
+if (!chxm1023.data) chxm1023.data = {};
+if (!chxm1023.data.results) chxm1023.data.results = {};
 
-iSharesubcribe.data.results.subscriptions = [];
+chxm1023.data.results.subscriptions = [];
 
-if (iSharesubcribe.data.results.paywalls) {
-  const subscriptions = processPaywalls(iSharesubcribe.data.results.paywalls);
+if (chxm1023.data.results.paywalls) {
+  const subscriptions = processPaywalls(chxm1023.data.results.paywalls);
   for (const sub of subscriptions) {
-    iSharesubcribe.data.results.subscriptions.push(sub);
+    chxm1023.data.results.subscriptions.push(sub);
   }
 }
 
 for (const productId of list) {
-  iSharesubcribe.data.results.subscriptions.push(createSubscription(productId));
+  chxm1023.data.results.subscriptions.push(createSubscription(productId));
 }
 
-$done({ body: JSON.stringify(iSharesubcribe) });
+$done({ body: JSON.stringify(chxm1023) });
