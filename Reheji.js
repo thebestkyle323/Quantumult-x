@@ -14,7 +14,7 @@
 hostname = api.revenuecat.com
 
 *************************************/
-let chxm1024 = {}, chxm1023 = JSON.parse(typeof $response != "undefined" && $response.body || "{}");
+let chxm1024 = {},  = JSON.parse(typeof $response != "undefined" && $response.body || "{}");
 const headers = $request.headers, ua = headers['User-Agent'] || headers['user-agent'], bundle_id = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'];
 
 //排除已禁止MITM的APP
