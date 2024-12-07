@@ -1,8 +1,6 @@
 /*************************************
 
 项目名称：SNOW-系列解锁
-更新日期：2024-12-06
-脚本作者：chxm1023
 电报频道：https://t.me/iSharesubcribe
 使用声明：⚠️仅供参考，🈲转载与售卖！
 
@@ -15,7 +13,6 @@
 hostname = *.snow.me
 
 *************************************/
-
 
 var chxm1023 = JSON.parse($response.body);
 const ua = $request.headers["User-Agent"] || $request.headers["user-agent"];
