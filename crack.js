@@ -95,7 +95,16 @@ if(typeof $response == "undefined") {
       {"app_name":"Quitzilla","bundle_id":"com.despdevs.quitzilla","product_id":"com.despdevs.quitzilla.sub1y","entitlements":["premium"],"version":"1.2"},
       {"app_name":"money_manager","bundle_id":"com.happy.moneyManager","product_id":"com.happy.money.forever","entitlements":["premium"],"version":"1.2.9"},
       {"app_name":"G%20E%20I%20S%20T","bundle_id":"com.memorado.app","product_id":"com.memorado.subscription.yearly.v1","entitlements":["memorado_premium"],"version":"7.7.0"},
-      {"app_name":"IntervalTimer","bundle_id":"com.simpleinnovation.timer.interval","product_id":"com.simpleinnovation.timer.interval.pro.forever.discount25","entitlements":["pro"],"version":"1.7.1"}
+      {"app_name":"IntervalTimer","bundle_id":"com.simpleinnovation.timer.interval","product_id":"com.simpleinnovation.timer.interval.pro.forever.discount25","entitlements":["pro"],"version":"1.7.1"},
+      {"app_name":"YetiVpn","bundle_id":"com.yetivpn.mastersecure.bestvpnproxy","product_id":"yetipro.yearly","entitlements":["Yeti Pro Subscription"],"version":"1.0.34"},
+      {"app_name":"Penbook02","bundle_id":"camp.user.penbook","product_id":"penbook.lifetime.2024.12.C","entitlements":["proLoyalty"],"version":"6.8.3"},
+      {"app_name":"%E6%9E%81%E7%AE%80%E6%97%B6%E9%92%9F","bundle_id":"com.mad.FlipClock","product_id":"com.mad.zenflipclock.iap.buymeacoffee","entitlements":["pro"],"version":"4.6.4"},
+      {"app_name":"PDF%20Converter%20Swift","bundle_id":"com.pdf.converter.editor.jpgtopdf.maker","product_id":"pdf.converter.pro.lifetime","entitlements":["pdf.converter.pro.lifetime"],"version":"1.0.54"},
+      {"app_name":"Tidur%20Timers","bundle_id":"net.voidstern.multitimer","product_id":"net.voidstern.multitimer.yearly","entitlements":["Pro"],"version":"5.5.5"},
+      {"app_name":"Thiro","bundle_id":"io.github.ctlvie.atelerix","product_id":"atelerix_pro_lifetime","entitlements":["pro"],"version":"1.3.12"},
+      {"app_name":"PROVPN","bundle_id":"com.adpsafe.provpnwebshield","product_id":"com.provpn.year","entitlements":["pro"],"version":"2.0.1"},
+      {"app_name":"RunKit","bundle_id":"com.qeezon.RunKit","product_id":"runkit_19.99_1y","entitlements":["Premium"],"version":"1.24"},
+      {"app_name":"Fiery%20Feeds","bundle_id":"net.voidstern.fiery-feeds","product_id":"net.voidstern.fieryfeeds.yearly.trial","entitlements":["com.fieryfeeds.pro"],"version":"2.12.5"}
    ];  
    for(let data of list){
      if(bundle_id == data.bundle_id || bundle_id == data.app_name){
