@@ -11,7 +11,7 @@
 ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/Reheji.js
 
 [mitm]
-hostname = api.revenuecat.com
+hostname = api.revenuecat.com,api.rc-backup.com
 
 *************************************/
 
@@ -26,6 +26,7 @@ if (forbiddenApps.some(app => (ua && ua.includes(app)) || ($request.body && $req
 }
 
 const bundle = {
+  'com.ausoco.umai': { name: 'umai_pro', id: 'umai_pro_yearly', cm: 'sja' },  //UmAI
   'camp.user.penbook': { name: 'pro', id: 'penbook.lifetime01', cm: 'sjb' },  //Penbook-智能笔记本
   'design.yugen.Flow': { name: 'pro', id: 'design.yugen.Flow.Lifetime', cm: 'sja' },  //Flow-番茄工作/专注计时器
   'com.runbuddy.prod': { name: 'premium', id: 'rb_9999_1y_1y7999', cm: 'sja' },  //Runna-马拉松训练
@@ -45,9 +46,14 @@ const bundle = {
 };
 
 const listua = {
+  'Wishy': { name: 'Wishy Subscription', id: 'wishy_lifetime_subscription', cm: 'sjc' },  //Wishy-记录愿望
+  'Fontsify': { name: 'pro', id: 'media.upstate.fontify.lifetime', cm: 'sjb' },  //Fontsify-字体
   'com.dison.diary': { name: 'vip', id: 'lifetime', cm: 'sjb' },  //随心记
   'Food-Diary': { name: 'Premium', id: 'fd_lifetime', cm: 'sjb' },  //美食日记
-  'Medication%20List': { name: 'Premium', id: 'ml_lifetime', cm: 'sjb' },  //药准时
+  'Meal%20Planner': { name: 'premium', id: 'mp_1999_lifetime', cm: 'sjc' },  //膳食计划员
+  'Medication%20List': { name: 'Premium', id: 'ml_lifetime', cm: 'sjc' },  //MedicationList-药准时
+  'Shared%20Family%20Shopping%20List': { name: 'premium', id: 'ls_1299_lifetime', cm: 'sjc' },  //购物清单
+  'Pantry%20Check': { name: 'Premium', id: 'pc_lifetime', cm: 'sjc' },  //Pantry Check
   'becoming': { name: 'Strength Pro', id: 'strength_membership_lifetime', cm: 'sjb' },  //练就
   'SCRL': { name: 'com.dopedevelopment.Panels.subscription.Pro_Dynamic_Pricing', id: 'strength_membership_lifetime', cm: 'sja' },  //SCRL-图片拼接
   'Morphose': { name: 'ProStandard', id: 'com.pixery.morphose.yearly', cm: 'sja' },  //Morphose
