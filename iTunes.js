@@ -15,7 +15,8 @@ hostname = buy.itunes.apple.com
 
 *************************************/
 
-var iSharesubcribe = JSON.parse($response.body);
+
+var chxm1023 = JSON.parse($response.body);
 const ua = $request.headers['User-Agent'] || $request.headers['user-agent'];
 const bundle_id = chxm1023.receipt["bundle_id"] || chxm1023.receipt["Bundle_Id"];
 const yearid = `${bundle_id}.year`;
@@ -24,6 +25,8 @@ const yearlysubscription = `${bundle_id}.yearlysubscription`;
 const lifetimeid = `${bundle_id}.lifetime`;
 
 const list = {
+  'com.qingcheng.seal.Seal': { cm: 'timeb', hx: 'hxpda', id: "com.qingcheng.seal.Seal.premium.forever", latest: "chxm1023" },  //印章制作
+  'com.idealityapp.VideoEditing': { cm: 'timeb', hx: 'hxpda', id: "MagicVideo_Vip_Permanent", latest: "chxm1023" },  //魔影-视频剪辑
   'YinzhangMaster': { cm: 'timeb', hx: 'hxpda', id: "com.xiaoqi.seal.forever", latest: "chxm1023" },  //印章大师
   'com.cuilingshi.flipclock': { cm: 'timeb', hx: 'hxpda', id: "FlipClockProVersion", latest: "chxm1023" },  //翻页时钟
   'com.maine.aifill': { cm: 'timeb', hx: 'hxpda', id: "com.maine.aifill.unlimited", latest: "chxm1023" },  //AI FILL-智能填充.换衣/换背景
