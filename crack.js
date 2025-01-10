@@ -3,13 +3,12 @@
 频道地址：https://t.me/iSharesubcribe
 使用声明：️仅供学习交流, 🈲️商业用途
 ********************************
-
 [rewrite_local]
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/.+$) url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/crack.js
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/.+$) url script-request-header https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/crack.js
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/.+$) url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/crack.js
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/.+$) url script-request-header https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/crack.js
 [mitm] 
 hostname = api.revenuecat.com,api.rc-backup.com
-*******************************
+*******************************/
 let obj = {};
 
 if(typeof $response == "undefined") {
@@ -17,8 +16,8 @@ if(typeof $response == "undefined") {
   delete $request.headers["X-RevenueCat-ETag"];
   obj.headers = $request.headers;
 }else {
-  let body = JSON.parse(typeof $response != "undefined" && $response.body || null);
-  if(body && body.subscriber) {
+  let body = JSON.parse(typeof $response != "undefined" &amp;&amp; $response.body || null);
+  if(body &amp;&amp; body.subscriber) {
     let date = {"expires_date": "2999-01-01T00:00:00Z","original_purchase_date":"2021-01-01T00:00:00Z","purchase_date": "2021-01-01T00:00:00Z","ownership_type": "PURCHASED","store": "app_store"};
     let subscriber = body.subscriber;
     let bundle_id = $request.headers["X-Client-Bundle-ID"]?$request.headers["X-Client-Bundle-ID"]:$request.headers["User-Agent"].match(/^[%a-zA-Z0-9]+/)[0];
@@ -107,7 +106,9 @@ if(typeof $response == "undefined") {
       {"app_name":"Focused%20iOS","bundle_id":"net.voidstern.focused","product_id":"net.voidstern.focused.yearly.trial","entitlements":["Pro"],"version":"1.9.2"},
       {"app_name":"Any%20IPTV%20Player","bundle_id":"com.anyiptvplayer.cihan","product_id":"lifetimepremium","entitlements":["premium"],"version":"6.9.7"},
       {"app_name":"WordBoard","bundle_id":"net.bytesize.wordboard","product_id":"net.bytesize.wordboard.iap.pro","entitlements":["pro"],"version":"6.5.1"},
-      {"app_name":"HabitDone","bundle_id":"com.dison.HabitDone","product_id":"Lifetime","entitlements":["pro"],"version":"3.1.2"}
+      {"app_name":"HabitDone","bundle_id":"com.dison.HabitDone","product_id":"Lifetime","entitlements":["pro"],"version":"3.1.2"},
+      {"app_name":"Hydro%20Coach","bundle_id":"com.codium.hydrocoach","product_id":"hc_pro_lifetime","entitlements":["pro"],"version":"1.0.10"},
+      {"app_name":"Planny","bundle_id":"com.kevinreutter.Artemis","product_id":"com.kevinreutter.Artemis.PremiumLifetime","entitlements":["Premium"],"version":"10.0.17"}
    ];  
    for(let data of list){
      if(bundle_id == data.bundle_id || bundle_id == data.app_name){
@@ -126,3 +127,4 @@ if(typeof $response == "undefined") {
 }
 
 $done(obj);
+
