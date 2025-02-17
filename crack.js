@@ -8,8 +8,8 @@
 ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/.+$) url script-request-header https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/crack.js
 [mitm] 
 hostname = api.revenuecat.com,api.rc-backup.com
-*******************************/
 
+*******************************/
 
 let obj = {};
 
@@ -18,11 +18,11 @@ if(typeof $response == "undefined") {
   delete $request.headers["X-RevenueCat-ETag"];
   obj.headers = $request.headers;
 }else {
-  let body = JSON.parse(typeof $response != "undefined" &amp;&amp; $response.body || null);
-  if(body &amp;&amp; body.subscriber) {
+  let body = JSON.parse(typeof $response != "undefined" && $response.body || null);
+  if(body && body.subscriber) {
     let date = {"expires_date": "2999-01-01T00:00:00Z","original_purchase_date":"2021-01-01T00:00:00Z","purchase_date": "2021-01-01T00:00:00Z","ownership_type": "PURCHASED","store": "app_store"};
     let subscriber = body.subscriber;
-    const newObj = Object.fromEntries(Object.entries($request.headers).map(([k, v]) =&gt; [k.toLowerCase(), v]));
+    const newObj = Object.fromEntries(Object.entries($request.headers).map(([k, v]) => [k.toLowerCase(), v]));
     let bundle_id = newObj["x-client-bundle-id"]?newObj["x-client-bundle-id"]:newObj["user-agent"].match(/^[%a-zA-Z0-9]+/)[0];
     const list = [
       {"app_name":"Days","bundle_id":"net.mattdavenport.daysuntil","product_id":"net.mattdavenport.daysuntil.dayspremiumlifetime","entitlements":["premium","pro"],"version":"3.15"},
@@ -125,7 +125,21 @@ if(typeof $response == "undefined") {
       {"app_name":"ArchiveList","bundle_id":"com.jy.ArchiveBox","product_id":"com.jy.ArchiveBox.pro_1","entitlements":["pro_life"],"version":"2.6.1"},
       {"app_name":"%E4%BA%BA%E7%94%9F%E6%B8%85%E5%8D%95","bundle_id":"com.metaorder.LifeList","product_id":"com.metaorder.lifelist.premium","entitlements":["premium","pro"],"version":"2.2.3"},
       {"app_name":"XCam","bundle_id":"com.miiiao.XCam","product_id":"com.miiiao.xcam.lifetime","entitlements":["pro"],"version":"1.40"},
-      {"app_name":"CountDuck","bundle_id":"co.countduck.app","product_id":"Lifetime","entitlements":["premium"],"version":"3.0.1"}
+      {"app_name":"CountDuck","bundle_id":"co.countduck.app","product_id":"Lifetime","entitlements":["premium"],"version":"3.0.1"},
+      {"app_name":"MySticker","bundle_id":"com.miiiao.MySticker","product_id":"com.miiiao.MySticker.lifetime","entitlements":["mysticker premium"],"version":"3.4"},
+      {"app_name":"%E7%94%BB%E5%8E%86","bundle_id":"com.bapaws.calendar","product_id":"com.bapaws.calendar.lifetime","entitlements":["pro"],"version":"1.7.8"},
+      {"app_name":"iHabit","bundle_id":"com.gostraight.iHabit","product_id":"ihabit_forever_payment_vip","entitlements":["ihabit_lTime_subscription","ihabit_subscription_pro"],"version":"1.0.25"},
+      {"app_name":"%E6%BA%AA%E6%B5%81","bundle_id":"com.donewin.brainwaves","product_id":"rive_premium_lifetime","entitlements":["rive_premium"],"version":"2.0.1"},
+      {"app_name":"记一杯","bundle_id":"me.xgmm.markacup","product_id":"202403180021","entitlements":["premiun"],"version":"1.5.4"},
+      {"app_name":"Inread","bundle_id":"Swipe-and-tap.inRead","product_id":"inRead.premium.monthly","entitlements":["premium_access"],"version":"1.4"},
+      {"app_name":"Yosum","bundle_id":"terrykuo.co.yosum","product_id":"terrykuo.co.yosum.premiummembership","entitlements":["Premium"],"version":"2.5.5"},
+      {"app_name":"DHWaterMarkManager","bundle_id":"","product_id":"lifetimeVIP_001","entitlements":["vip"],"version":"1.2.2"},
+      {"app_name":"ZenTime","bundle_id":"com.c2.applock.cloak","product_id":"com.c2.applock.cloak.lifetime","entitlements":["Pro"],"version":"1.1.5"},
+      {"app_name":"快制图表","bundle_id":"com.yong.quickChart","product_id":"qgnjs_lifetime","entitlements":["unlock all"],"version":"3.35.0"},
+      {"app_name":"语音合成助手","bundle_id":"social.steet.TextToSpeech","product_id":"tts_1m","entitlements":["premium"],"version":"3.9.1"},
+      {"app_name":"Record2Text","bundle_id":"skylar.app.Record2Text","product_id":"afi.recnote.pro","entitlements":["afi.recnote.pro"],"version":"8.5"},
+      {"app_name":"pokenote","bundle_id":"com.migao.pokenote","product_id":"pokenote_pro","entitlements":["pro"],"version":"2.0.2"},
+      {"app_name":"Watchly","bundle_id":"com.appexosolutions.watchface","product_id":"watchface.lifetime","entitlements":["lifetime"],"version":"2.3.5"}
    ];  
    for(let data of list){
      if(bundle_id == data.bundle_id || bundle_id == data.app_name){
