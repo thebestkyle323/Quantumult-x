@@ -49,6 +49,7 @@ const bundle = {
 };
 
 const listua = {
+  'FocusFour': { name: 'pro', id: 'focusfour_lifetime', cm: 'sjb' },  //FocusFour-四象限任务管理
   'remoteMouse': { name: 'pro', id: 'Subscribe__RemoteMouse_Yearly', cm: 'sja' },  //无线鼠标
   'IPCams': { name: 'pro', id: 'ipcams_pro_lifetime', nameb: 'pro_plus', idb: 'ipcams_pro_plus_lifetime', cm: 'sjb' },  //网络摄像机浏览器-IPCams
   'Kylin': { name: 'pro', id: 'pro_life', cm: 'sjb' },  //吉光卡片
