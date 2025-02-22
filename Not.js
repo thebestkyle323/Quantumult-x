@@ -7,7 +7,7 @@
 
 ********************************
 [rewrite_local]
-https://notability.com/global url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/heads/main/Not.js
+https://notability.com/global url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/Not.js
 
 [mitm]
 hostname = notability.com
