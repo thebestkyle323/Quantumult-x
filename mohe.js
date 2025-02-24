@@ -7,7 +7,7 @@
 
 ********************************
 [rewrite_local]
-^https:\/\/lab\.shadowbox\.top\/ab url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/heads/main/mohe.js
+^https:\/\/lab\.shadowbox\.top\/ab url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/mohe.js
 ^https:\/\/lab\.shadowbox\.top\/ab\/apppage\/launch$ url reject
 [mitm]
 hostname = lab.shadowbox.top
