@@ -1,5 +1,5 @@
-/*************************************
-
+/*******************************
+脚本功能：脚本解锁订阅
 项目名称：revenuecat合集 （此合集只包含10.5及以后的软件）
 软件版本：均适配2023.9.8最新 （每一个下载地址对应一个UAMappings）
 下载地址：星锤日记 https://is.gd/R5KqD4
@@ -27,21 +27,24 @@
 下载地址：Funexpected 
 下载地址：中国法律
 频道地址：https://t.me/iSharesubcribe
-使用声明：⚠️仅供参考，🈲️转载与售卖！
 
-**************************************
+使用声明：️仅供学习交流, 🈲️商业用途
 
+********************************
 [rewrite_local]
 #修改
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/Revenuecat.js
+^https:\/\/(api\.revenuecat\.com|api\.rc-backup\.com)\/.+\/(receipts$|subscribers\/[^/]+$) url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/Revenuecat.js
 #清理
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/Revenuecat.js
+^https:\/\/(api\.revenuecat\.com|api\.rc-backup\.com)\/.+\/(receipts$|subscribers\/[^/]+$) url script-request-header https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/Revenuecat.js
+
 https://api.lianjiu.fun/app/api/v1/profile url reject
 
 [mitm] 
 hostname = api.revenuecat.com, api.lianjiu.fun
 
-************************************/
+
+*******************************/
+
 
 const Q = {};
 const Q1 = JSON.parse(typeof $response != "undefined" && $response.body || null);
@@ -64,6 +67,9 @@ if (typeof $response == "undefined") {
   var UA = $request.headers['user-agent'];
   const app = '1';
   const UAMappings = {
+    'ClipyBoard':{name:'premium',id:'clipyboard_yearly'},//2.27
+    'Spark':{name:'premium',id:'spark_c_5999_1y_d50'},//2.27
+    'Barcodes':{name:'Unlimited',id:'com.barcodesapp.lifetime'},//12.10
     'Relax':{name:'pro',id:'com.happydogteam.relax.lifetimePro'},//12.1
     'Nightcam':{name:'nightcam_pro',id:'com.ahmetserdarkaradeniz.nightcamyearlyalternative'},//11.26
     'Jellycuts':{name:'pro',id:'standart'},//11.21
@@ -198,3 +204,4 @@ if (typeof $response == "undefined") {
   Q.body = JSON.stringify(Q1);
 }
 $done(Q);
+
