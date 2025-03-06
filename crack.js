@@ -1,7 +1,10 @@
 /*******************************
-脚本功能：脚本解锁订阅集合
+脚本功能：脚本解锁订阅
+
 频道地址：https://t.me/iSharesubcribe
+
 使用声明：️仅供学习交流, 🈲️商业用途
+
 ********************************
 [rewrite_local]
 ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/.+$) url script-response-body https://raw.githubusercontent.com/thebestkyle323/Quantumult-x/main/crack.js
@@ -139,7 +142,8 @@ if(typeof $response == "undefined") {
       {"app_name":"语音合成助手","bundle_id":"social.steet.TextToSpeech","product_id":"tts_1m","entitlements":["premium"],"version":"3.9.1"},
       {"app_name":"Record2Text","bundle_id":"skylar.app.Record2Text","product_id":"afi.recnote.pro","entitlements":["afi.recnote.pro"],"version":"8.5"},
       {"app_name":"pokenote","bundle_id":"com.migao.pokenote","product_id":"pokenote_pro","entitlements":["pro"],"version":"2.0.2"},
-      {"app_name":"Watchly","bundle_id":"com.appexosolutions.watchface","product_id":"watchface.lifetime","entitlements":["lifetime"],"version":"2.3.5"}
+      {"app_name":"Watchly","bundle_id":"com.appexosolutions.watchface","product_id":"watchface.lifetime","entitlements":["lifetime"],"version":"2.3.5"},
+      {"app_name":"%E6%BB%B4%E7%AD%94%E6%97%B6%E9%92%9F","bundle_id":"com.do.flipclock","product_id":"lifetime_1","entitlements":["lifetime_1"],"version":"2.0.9"}
    ];  
    for(let data of list){
      if(bundle_id == data.bundle_id || bundle_id == data.app_name){
@@ -158,4 +162,7 @@ if(typeof $response == "undefined") {
 }
 
 $done(obj);
+
+
+
 
